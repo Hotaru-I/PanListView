@@ -14,6 +14,8 @@
 		B38EE50B1B77584200D96223 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38EE50A1B77584200D96223 /* Images.xcassets */; };
 		B38EE50E1B77584200D96223 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B38EE50C1B77584200D96223 /* LaunchScreen.xib */; };
 		B38EE51A1B77584200D96223 /* PanListViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B38EE5191B77584200D96223 /* PanListViewTests.m */; };
+		B38EE5251B77662E00D96223 /* PanListView.m in Sources */ = {isa = PBXBuildFile; fileRef = B38EE5241B77662E00D96223 /* PanListView.m */; };
+		B38EE5271B778B3D00D96223 /* PanListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B38EE5261B778B3D00D96223 /* PanListView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		B38EE5131B77584200D96223 /* PanListViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PanListViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38EE5181B77584200D96223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B38EE5191B77584200D96223 /* PanListViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PanListViewTests.m; sourceTree = "<group>"; };
+		B38EE5231B77662E00D96223 /* PanListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanListView.h; sourceTree = "<group>"; };
+		B38EE5241B77662E00D96223 /* PanListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanListView.m; sourceTree = "<group>"; };
+		B38EE5261B778B3D00D96223 /* PanListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PanListView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +94,9 @@
 				B38EE50A1B77584200D96223 /* Images.xcassets */,
 				B38EE50C1B77584200D96223 /* LaunchScreen.xib */,
 				B38EE4FD1B77584200D96223 /* Supporting Files */,
+				B38EE5231B77662E00D96223 /* PanListView.h */,
+				B38EE5241B77662E00D96223 /* PanListView.m */,
+				B38EE5261B778B3D00D96223 /* PanListView.xib */,
 			);
 			path = PanListView;
 			sourceTree = "<group>";
@@ -201,6 +209,7 @@
 			files = (
 				B38EE5091B77584200D96223 /* Main.storyboard in Resources */,
 				B38EE50E1B77584200D96223 /* LaunchScreen.xib in Resources */,
+				B38EE5271B778B3D00D96223 /* PanListView.xib in Resources */,
 				B38EE50B1B77584200D96223 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +230,7 @@
 			files = (
 				B38EE5061B77584200D96223 /* ViewController.m in Sources */,
 				B38EE5031B77584200D96223 /* AppDelegate.m in Sources */,
+				B38EE5251B77662E00D96223 /* PanListView.m in Sources */,
 				B38EE5001B77584200D96223 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +358,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PanListView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +369,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PanListView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -416,6 +428,7 @@
 				B38EE51F1B77584200D96223 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B38EE5201B77584200D96223 /* Build configuration list for PBXNativeTarget "PanListViewTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +437,7 @@
 				B38EE5221B77584200D96223 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

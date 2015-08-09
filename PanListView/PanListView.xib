@@ -1,15 +1,96 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PanListView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="398"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMl-SB-gNe">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <subviews>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_down" translatesAutoresizingMaskIntoConstraints="NO" id="f0h-Gt-3Yt">
+                            <rect key="frame" x="138" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="Vaz-Is-KQu"/>
+                                <constraint firstAttribute="height" constant="44" id="elg-Bx-qEu"/>
+                            </constraints>
+                        </imageView>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_up" translatesAutoresizingMaskIntoConstraints="NO" id="ZeY-No-dkV">
+                            <rect key="frame" x="276" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="7Sy-wp-wrU"/>
+                                <constraint firstAttribute="height" constant="44" id="tAp-Pl-926"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53V-Zy-rbu">
+                            <rect key="frame" x="8" y="0.0" width="312" height="44"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tabAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="FWZ-fd-IwM"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90980392160000001" green="0.90196078430000004" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="3Dx-jN-IPs"/>
+                        <constraint firstAttribute="centerY" secondItem="f0h-Gt-3Yt" secondAttribute="centerY" id="Au0-Cz-seJ"/>
+                        <constraint firstAttribute="centerX" secondItem="f0h-Gt-3Yt" secondAttribute="centerX" id="HCZ-cY-0l0"/>
+                        <constraint firstItem="ZeY-No-dkV" firstAttribute="top" secondItem="QMl-SB-gNe" secondAttribute="top" id="Yd5-ZW-v9G"/>
+                        <constraint firstAttribute="trailing" secondItem="53V-Zy-rbu" secondAttribute="trailing" id="cca-5c-Gua"/>
+                        <constraint firstAttribute="bottom" secondItem="53V-Zy-rbu" secondAttribute="bottom" id="hoE-ej-aQH"/>
+                        <constraint firstItem="53V-Zy-rbu" firstAttribute="top" secondItem="QMl-SB-gNe" secondAttribute="top" id="kGv-Sn-09G"/>
+                        <constraint firstItem="ZeY-No-dkV" firstAttribute="top" secondItem="QMl-SB-gNe" secondAttribute="top" id="nhC-Ye-MPa"/>
+                        <constraint firstItem="53V-Zy-rbu" firstAttribute="leading" secondItem="QMl-SB-gNe" secondAttribute="leading" constant="8" id="rHA-uw-oW9"/>
+                        <constraint firstAttribute="trailing" secondItem="ZeY-No-dkV" secondAttribute="trailing" id="ySV-Fd-fuD"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Yd5-ZW-v9G"/>
+                        </mask>
+                    </variation>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="56" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="EzI-6q-iHv">
+                    <rect key="frame" x="0.0" y="44" width="320" height="354"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="z6L-5b-nTk"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="KR9-r0-p1z"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="QMl-SB-gNe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6ST-LZ-J5U"/>
+                <constraint firstItem="EzI-6q-iHv" firstAttribute="top" secondItem="QMl-SB-gNe" secondAttribute="bottom" id="7m6-YT-a1j"/>
+                <constraint firstAttribute="bottom" secondItem="EzI-6q-iHv" secondAttribute="bottom" id="G5N-UN-82z"/>
+                <constraint firstItem="QMl-SB-gNe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="XAB-F2-yDV"/>
+                <constraint firstItem="EzI-6q-iHv" firstAttribute="top" secondItem="QMl-SB-gNe" secondAttribute="bottom" id="mkO-aZ-rb5"/>
+                <constraint firstAttribute="trailing" secondItem="QMl-SB-gNe" secondAttribute="trailing" id="pT7-RC-0I6"/>
+                <constraint firstAttribute="trailing" secondItem="EzI-6q-iHv" secondAttribute="trailing" id="vm9-78-F8N"/>
+                <constraint firstItem="EzI-6q-iHv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xTx-oS-e3B"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="centerArrowImg" destination="f0h-Gt-3Yt" id="2PG-S6-s2V"/>
+                <outlet property="rightArrowImg" destination="ZeY-No-dkV" id="Ffk-mc-Jk3"/>
+                <outlet property="tableView" destination="EzI-6q-iHv" id="Xic-OZ-HVZ"/>
+                <outlet property="tapBtn" destination="53V-Zy-rbu" id="V5I-Qo-2a3"/>
+            </connections>
         </view>
     </objects>
+    <resources>
+        <image name="icon_down" width="45" height="45"/>
+        <image name="icon_up" width="45" height="45"/>
+    </resources>
 </document>
